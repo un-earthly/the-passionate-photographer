@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# [The Passionate Photographer]()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is project for a photographer who gives photography and photography related consultation service independently to people.
 
-## Available Scripts
 
-In the project directory, you can run:
+## What i've done in this project :
 
-### `npm start`
+* A basic navbar using react router dom and [tailwind](https://tailwindcss.com/) utilities
+* A Landing page which uses image from unsplash.
+* A service section which showcases all the service provided by the artist.this section is created tailwind and react spring and tailwind animation utility classes for animation.
+* An Album section to showcase the works of the artist. which is created with [react-tabs](https://github.com/reactjs/react-tabs). 
+* Footer which has different routes to navigate between different pages.And social pages of the artist.
+* A user login and registration interface which uses firebase to store data and user authentication.most of the work is done using a library called [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks).
+* A shoping page to buy digital photographs.
+* There is a blog page only for the members.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Techonologies used in this project :
+i've designed this application with various web techonologies and libraries.I've chosen those technologies based on scalability and customizability. 
+* I've used [React](https://reactjs.org/) as frontend.it is a javascript library created and maintained by facebook.  
+* For styling the Application i've chosen [tailwindCSS](https://tailwindcss.com/) over bootstrap, bulma and other css frameworks because it gives more freedom and easily customizable utality classes. and easy to make the application responsive to all the screens.
+* [react-router-dom v6](https://reactrouter.com/docs/en/v6) which is a library for react to navigate in different routes or pages.
+* [firebase](https://firebase.google.com/) for handling user creation email varification and all user realted things. 
+* [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks) to handle firebase authentication and all.
+* [bootstrapIcons](https://icons.getbootstrap.com/) for icons in the application.the reason for using bootstrap icons is, it is easy to use class based icon libray can be imported as css fonts.
+* [react-spring](https://react-spring.io/) which is a library for react to animate different portion of the application.
+* [react-tabs](https://github.com/reactjs/react-tabs) is used for showcasing the photographs in home page. it saves a lot of time.
+* [react-toastify](https://fkhadra.github.io/react-toastify/introduction) for toasts.
+* i've used [firebase hosting](https://firebase.google.com/) for making the application live to the world.
+* as fonts i've used [Poppins](https://fonts.google.com/specimen/Poppins?query=popp),[Tangerine](https://fonts.google.com/specimen/Tangerine?category=Handwriting)
