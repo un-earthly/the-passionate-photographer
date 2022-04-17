@@ -9,6 +9,7 @@ export default function Navbar() {
             <ul className="flex justify-center items-center text-cyan-50">
                 <NavLink className='mx-2 py-1 p-3 hover:text-[#47ffb2] duration-500' to='/home'>Home</NavLink>
                 <NavLink className='mx-2 py-1 p-3 hover:text-[#47ffb2] duration-500' to='/about'>About</NavLink>
+                <NavLink className='mx-2 py-1 p-3 hover:text-[#47ffb2] duration-500' to='/checkout'>Checkout</NavLink>
                 <NavLink className='mx-2 py-1 p-3 hover:text-[#47ffb2] duration-500' to='/login'>Login</NavLink>
                 <NavLink className='mx-2 py-1 p-3 hover:text-[#47ffb2] duration-500' to='/register'>Register</NavLink>
             </ul>
