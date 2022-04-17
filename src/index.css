@@ -61,6 +61,20 @@ nav>ul>a:hover:after {
 }
 
 .react-tabs__tab--selected {
+  border: none !important;
   background: transparent !important;
   color: orange !important;
+  position: relative !important;
+}
+
+.react-tabs__tab--selected::after {
+  content: '';
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  height: 1px !important;
+  width: 50% !important;
+  background: rgb(88, 255, 197) !important;
+  transition: .5s !important;
 }
