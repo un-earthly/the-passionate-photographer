@@ -4,11 +4,13 @@ import useShowPass from '../../Hooks/useShowPass'
 import Social from '../../UtilitiesAndShared/Social'
 import auth from '../../firebase.init';
 import useUserCredential from '../../Hooks/useUserCredential';
-import { toast, ToastContainer } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 export default function Register() {
     const { showPass, setShowPass } = useShowPass()
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, {
+        sendEmailVerification: true,
+    })
 
 
     const { emailRef, email, passwordRef, password, nameRef } = useUserCredential();
@@ -51,16 +53,18 @@ export default function Register() {
                             ref={passwordRef}
                         />
                         <span onClick={() => setShowPass(!showPass)} className="font-medium text-gray-400 hover:text-gray-500"><i className={`bi bi-${showPass ? 'eye-slash' : 'eye'}`}></i></span>
+
+
                     </div>
                     <button
                         className="w-full border-b border-b-orange-400 duration-500 py-3 font-bold text-white hover:bg-orange-400 hover:rounded-xl hover:border-transparent active:translate-y-[0.125rem] active:border-b-blue-400"
                     >
                         CREATE ACCOUNT
                     </button>
+                    <Link className='text-white text-center block' to='/login'>Already Have An Account ? <p className="text-orange-500 mt-3 inline">Login Now!</p></Link>
                 </form>
                 <Social />
             </div>
-            <ToastContainer />
         </div>
     )
 }

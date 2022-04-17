@@ -8,16 +8,15 @@ import auth from '../firebase.init'
 export default function UserRoute({ children }) {
     const [user, loading, error] = useAuthState(auth)
     const location = useLocation();
-    <ToastContainer />
+
     if (loading) {
-        toast('Please Wait')
+        return <>
+            {toast('Please Be patient')}
+            < ToastContainer />
+        </>
     }
-    if (error) {
-        toast(error.message)
-    }
-    if (user) {
-        return children;
-    } else {
+    if (!user) {
         return <Navigate to='/login' state={{ from: location }} replace />
     }
+    return children;
 }
