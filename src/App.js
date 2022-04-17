@@ -8,6 +8,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
 import Footer from "./UtilitiesAndShared/Footer";
 import Blogs from "./Pages/Blogs/Blogs";
+import Contact from "./Pages/Contact/Contact";
 function App() {
   return (
     <div className="bg-no-repeat bg-fixed bg-blend-overlay bg-cover bg-[#000000bb] bg-[url('../public/images/home-banner.jpg')]">
@@ -22,6 +23,7 @@ function App() {
               <Checkout />
             </UserRoute>} />
           <Route path='/blogs' element={<UserRoute ><Blogs /></UserRoute>} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>

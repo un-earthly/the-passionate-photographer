@@ -48,13 +48,13 @@ export default function Login() {
                         />
                         <span onClick={() => setShowPass(!showPass)} className="font-medium text-gray-400 hover:text-gray-500"><i className={`bi bi-${showPass ? 'eye-slash' : 'eye'}`}></i></span>
                     </div>
-                    <Link className='text-white text-center block' to='/register'>New Here ? <p className="text-orange-500 mt-3 inline">Register Now!</p></Link>
                     <p className="text-red-500">{error?.message}</p>
                     <button
                         className="w-full border-b border-b-orange-400 duration-500 py-3 font-bold text-white hover:bg-[#ffa60048] hover:rounded-sm hover:border-transparent active:translate-y-[0.125rem] active:border-b-blue-400"
                     >
                         LOGIN
                     </button>
+                    <Link className='text-white text-center block' to='/register'>New Here ? <p className="text-orange-500 mt-3 inline">Register Now!</p></Link>
                 </form>
                 <Social />
             </div>

@@ -57,7 +57,7 @@ export default function Register() {
 
                     </div>
                     <button
-                        className="w-full border-b border-b-orange-400 duration-500 py-3 font-bold text-white hover:bg-orange-400 hover:rounded-xl hover:border-transparent active:translate-y-[0.125rem] active:border-b-blue-400"
+                        className="w-full border-b border-b-orange-400 duration-500 py-3 font-bold text-white hover:bg-[#ffa60044] hover:rounded-sm hover:border-transparent active:translate-y-[0.125rem] active:border-b-blue-400"
                     >
                         CREATE ACCOUNT
                     </button>

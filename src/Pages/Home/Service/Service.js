@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 export default function Service({ name, pricing, img, desc }) {
 
-    console.log(name, pricing, img, desc)
     return (
         <div className='p-4 text-center space-y-6'>
             <div className=' overflow-hidden h-[250px] rounded-md mx-auto'>

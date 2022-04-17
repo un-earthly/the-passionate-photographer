@@ -20,6 +20,13 @@ input:-webkit-autofill:active {
   transition: 5000s ease-in-out 0s;
 }
 
+input,
+textarea {
+  background: transparent;
+  border: 1px solid orange;
+  outline: none;
+}
+
 nav>ul>a,
 .checkoutBtn {
   position: relative;
