@@ -11,9 +11,6 @@ export default function Gallery() {
     const catFashion = imgs.filter(img => img.category === 'fashion')
     const catBeach = imgs.filter(img => img.category === 'beach')
 
-    const showBigImg = (img) => {
-
-    }
     return (
         <Tabs focusTabOnClick={false} className=' mt-14 text-center'>
             <TabList>
@@ -26,28 +23,28 @@ export default function Gallery() {
             <TabPanel>
                 <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
-                        catNature.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
+                        catNature.map(img => <img key={img.id} className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
                 <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
-                        catWedding.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
+                        catWedding.map(img => <img key={img.id} className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
                 <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
-                        catFashion.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
+                        catFashion.map(img => <img key={img.id} className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
                 <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
-                        catBeach.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
+                        catBeach.map(img => <img key={img.id} className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>

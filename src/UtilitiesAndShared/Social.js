@@ -8,7 +8,7 @@ export default function Social() {
     const [signInWithGithub, gihubError] = useSignInWithGithub(auth);
     toast(googleError || gihubError)
     return (
-        <div className='pb-4'>
+        <div className='pb-4 mt-10'>
 
             <div className="flex items-center space-x-4">
                 <hr className="w-full border border-orange-600" />
