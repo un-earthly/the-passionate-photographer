@@ -6,4 +6,61 @@
 
 * {
   font-family: 'Poppins';
+  box-sizing: border-box;
+}
+
+::selection {
+  color: cyan;
+}
+
+nav>ul>a {
+  position: relative;
+}
+
+nav>ul>a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 1px;
+  width: 0;
+  background: rgb(88, 255, 197);
+  transition: .5s;
+}
+
+nav>ul>a:hover:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 1px;
+  width: 50%;
+  background: rgb(88, 255, 197);
+}
+
+.active {
+  position: relative;
+  color: rgb(88, 255, 197);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 1px;
+  width: 50%;
+  background: rgb(88, 255, 197);
+}
+
+.react-tabs__tab-list {
+  border-bottom: none !important;
+}
+
+.react-tabs__tab--selected {
+  background: transparent !important;
+  color: orange !important;
 }

@@ -6,7 +6,7 @@ This is project for a photographer who gives photography and photography related
 ## What i've done in this project :
 
 * A basic navbar using react router dom and [tailwind](https://tailwindcss.com/) utilities
-* A Landing page which uses image from unsplash.
+* A Landing page which uses image from [Pexels](https://www.pexels.com/).
 * A service section which showcases all the service provided by the artist.this section is created tailwind and react spring and tailwind animation utility classes for animation.
 * An Album section to showcase the works of the artist. which is created with [react-tabs](https://github.com/reactjs/react-tabs). 
 * Footer which has different routes to navigate between different pages.And social pages of the artist.
