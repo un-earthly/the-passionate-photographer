@@ -1,4 +1,4 @@
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useAuthState } from 'react-firebase-hooks/auth';
 import React from 'react'
 import useShowPass from '../../Hooks/useShowPass'
 import Social from '../../UtilitiesAndShared/Social'

@@ -86,3 +86,7 @@ nav>ul>a:hover:after,
   position: relative !important;
   transition: .5s !important;
 }
+
+.animate-spin {
+  animation-duration: 10s;
+}
