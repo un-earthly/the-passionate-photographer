@@ -24,28 +24,28 @@ export default function Gallery() {
             </TabList>
 
             <TabPanel>
-                <div className="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+                <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
                         catNature.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+                <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
                         catWedding.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+                <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
                         catFashion.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
                     }
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+                <div className="grid grid-cols-3 gap-4 p-24 mx-auto">
                     {
                         catBeach.map(img => <img className='duration-500 filter h-full object-cover hover:brightness-50 cursor-pointer' onClick={() => showBigImg(img.picture)} src={img.picture} alt="" />)
                     }
