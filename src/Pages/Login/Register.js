@@ -23,7 +23,7 @@ export default function Register() {
         <div className='pb-20 pt-6 space-y-4 flex items-center justify-center'>
 
             <div className=" text-white w-3/4 mx-auto">
-                <header className="mb-3 text-8xl text-center font-[Tangerine] text-orange-500 font-bold">Lets Sign Up</header>
+                <header className="mb-3 md:text-8xl text-5xl text-center font-[Tangerine] text-orange-500 font-bold">Lets Sign Up</header>
                 <form onSubmit={e => handleRegister(e)} className='space-y-4'>
                     <div className="hover:backdrop-blur-lg duration-500 w-full rounded-md px-4 bg-transparent border border-orange-400">
                         <input

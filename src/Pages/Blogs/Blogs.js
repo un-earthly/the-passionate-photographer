@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Blogs() {
     return (
-        <div className='p-24 px-64 space-y-4'>
+        <div className='md:p-24 md:px-64 text-center md:text-left p-4 space-y-4'>
 
             <div className="q1">
                 <p className="text-orange-400">Difference between authorization and authentication?</p>

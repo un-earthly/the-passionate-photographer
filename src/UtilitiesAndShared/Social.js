@@ -1,11 +1,11 @@
 import React from 'react'
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../firebase.init';
 export default function Social() {
-    const [signInWithGoogle, user1, loading1, googleError] = useSignInWithGoogle(auth);
-    const [signInWithGithub, user2, loading2, gihubError] = useSignInWithGithub(auth);
+    const [signInWithGoogle, , , googleError] = useSignInWithGoogle(auth);
+    const [signInWithGithub, , , gihubError] = useSignInWithGithub(auth);
     toast(googleError?.message || gihubError?.message)
     return (
         <div className='pb-4 mt-10'>
@@ -17,20 +17,15 @@ export default function Social() {
             </div>
 
             <div className="flex items-center justify-center flex-col">
-                <a
-                    className="w-full cursor-pointer border-b border-b-orange-400 duration-500 hover:bg-[#ffa60048] bg-transparent py-2.5 px-4 font-bold text-center text-orange-400 block"
+                <button aclassName="w-full cursor-pointer border-b border-b-orange-400 duration-500 hover:bg-[#ffa60048] bg-transparent py-2.5 px-4 font-bold text-center text-orange-400 block"
                     onClick={() => signInWithGoogle()}
-                >Google</a>
-                <a
+                >Google</button>
+                <button
                     onClick={() => signInWithGithub()}
                     className="w-full cursor-pointer border-b border-b-orange-400 duration-500 hover:bg-[#ffa60048] bg-transparent py-2.5 px-4 font-bold text-center text-orange-400 block"
-                >Github</a>
+                >Github</button>
             </div>
 
-            <div className="mt-4 text-sm capitalize text-center">
-                you agree to our
-                <a className='cursor-pointer text-amber-500' > Terms and Privacy Policy</a>.
-            </div>
 
         </div>
     )
