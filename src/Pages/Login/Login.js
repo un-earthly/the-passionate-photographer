@@ -2,13 +2,15 @@ import React from 'react'
 import useUserCredential from '../../Hooks/useUserCredential'
 import useShowPass from '../../Hooks/useShowPass'
 import Social from '../../UtilitiesAndShared/Social'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { toast, ToastContainer } from 'react-toastify'
 export default function Login() {
     const { showPass, setShowPass } = useShowPass()
     const { setEmail, email, password, setPassword } = useUserCredential();
     const [signInWithEmailAndPassword, user, , error] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail,  , cantSendResetEmail] = useSendPasswordResetEmail(auth);
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname
@@ -18,7 +20,7 @@ export default function Login() {
         signInWithEmailAndPassword(email, password)
     }
 
-    if (user) {
+if (user) {
         navigate(from || '/', { replace: true })
 
     }
@@ -50,7 +52,15 @@ export default function Login() {
                         />
                         <span onClick={() => setShowPass(!showPass)} className="font-medium text-gray-400 hover:text-gray-500"><i className={`bi bi-${showPass ? 'eye-slash' : 'eye'}`}></i></span>
                     </div>
-                    <p className="text-red-500">{error?.message}</p>
+                    <p className="text-red-500">{error?.message || cantSendResetEmail?.message}</p>
+                    <p className='duration-500 text-orange-500 hover:underline' onClick={async () => {
+                        if (email.length > 0) {
+                            await sendPasswordResetEmail(email);
+                            toast('Sent email');
+                        } else {
+                            toast('please proveide the email')
+                        }
+                    }}> Forgot Password? Reset</p>
                     <button
                         className="w-full border-b border-b-orange-400 duration-500 py-3 font-bold text-white hover:bg-[#ffa60048] hover:rounded-sm hover:border-transparent active:translate-y-[0.125rem] active:border-b-blue-400"
                     >
@@ -60,6 +70,8 @@ export default function Login() {
                 </form>
                 <Social />
             </div>
+
+            <ToastContainer />
         </div >
     )
 }

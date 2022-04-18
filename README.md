@@ -1,19 +1,19 @@
-# [The Passionate Photographer](https://the-passionate-photographer.netlify.app/)
+# [The Passionate Photographer](https://the-passionate-photographer.web.app/)
 
 This is project for a photographer who gives photography and photography related consultation service independently to people.
 
 
 ## What i've done in this project :
 
-* A basic navbar using react router dom and [tailwind](https://tailwindcss.com/) utilities
-* A Landing page which uses image from [Pexels](https://www.pexels.com/).
-* A service section which showcases all the service provided by the artist.this section is created tailwind and react spring and tailwind animation utility classes for animation.
-* An Album section to showcase the works of the artist. which is created with [react-tabs](https://github.com/reactjs/react-tabs). 
-* Footer which has different routes to navigate between different pages.And social pages of the artist.
-* A user login and registration interface which uses firebase to store data and user authentication.most of the work is done using a library called [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks).
-* A shoping page to buy digital photographs.
-* There is a blog page only for the members.
-
+* This is simple single page application for an individual photographer called william jhon
+* He Provides services like wedding modeling and vacation photography.also he has intereset for natural photography
+* To Showcase his services and experience i've created a service page a gallary page.
+* For those who wants to hire him can send message and have conversation.for that the is a button which takes user to the contact page
+* if you want to access the checkout page you'll have to login in application first. you can login using google github or email and password.
+* you can reset the user password as well.
+* The application has support for user login and activity
+* User login can be stored through firebase.
+*these are some functionality of this application.*
 ## Techonologies used in this project :
 i've designed this application with various web techonologies and libraries.I've chosen those technologies based on scalability and customizability. 
 * I've used [React](https://reactjs.org/) as frontend.it is a javascript library created and maintained by facebook.  
@@ -22,7 +22,6 @@ i've designed this application with various web techonologies and libraries.I've
 * [firebase](https://firebase.google.com/) for handling user creation email varification and all user realted things. 
 * [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks) to handle firebase authentication and all.
 * [bootstrapIcons](https://icons.getbootstrap.com/) for icons in the application.the reason for using bootstrap icons is, it is easy to use class based icon libray can be imported as css fonts.
-* [react-spring](https://react-spring.io/) which is a library for react to animate different portion of the application.
 * [react-tabs](https://github.com/reactjs/react-tabs) is used for showcasing the photographs in home page. it saves a lot of time.
 * [react-toastify](https://fkhadra.github.io/react-toastify/introduction) for toasts.
 * i've used [firebase hosting](https://firebase.google.com/) for making the application live to the world.
