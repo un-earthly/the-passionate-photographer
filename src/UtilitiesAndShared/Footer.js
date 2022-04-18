@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="text-center bg-[rgba(128,128,128,0.2)] text-white">
             <div className="container px-6 pt-6">
                 <div className="flex justify-center mb-6">
-                    <a href="#!" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="#!" type="button" className="rounded-full  border hover:border-transparent border-orange-400  hover:backdrop-blur-lg  hover:scale-150 mx-4 hover:bg-[cyan] text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-500 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
@@ -23,7 +23,7 @@ export default function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="#!" type="button" className="rounded-full  border hover:border-transparent border-orange-400  hover:backdrop-blur-lg  hover:scale-150 mx-4 hover:bg-[cyan] text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-500 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
@@ -41,7 +41,7 @@ export default function Footer() {
                     </a>
 
 
-                    <a href="#!" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="#!" type="button" className="rounded-full  border hover:border-transparent border-orange-400  hover:backdrop-blur-lg  hover:scale-150 mx-4 hover:bg-[cyan] text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-500 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
@@ -58,7 +58,7 @@ export default function Footer() {
                         </svg>
                     </a>
 
-                    <a href="#!" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+                    <a href="#!" type="button" className="rounded-full  border hover:border-transparent border-orange-400  hover:backdrop-blur-lg  hover:scale-150 mx-4 hover:bg-[cyan] text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-500 ease-in-out w-9 h-9 m-1">
                         <svg aria-hidden="true"
                             focusable="false"
                             data-prefix="fab"
@@ -78,8 +78,8 @@ export default function Footer() {
             </div>
 
             <div className="text-center p-4 bg-[rgba(0,0,0,0.2)]">
-                © 2021 Copyright:
-                <a className="text-whitehite" href="https://tailwind-elements.com/">Tailwind Elements</a>
+                © Design And Developed By
+                <a className="text-orange-400" href="https://github.com/un-earthly"> Alamin</a>
             </div>
         </footer>
     )

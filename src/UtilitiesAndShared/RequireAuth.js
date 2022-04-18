@@ -5,8 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../firebase.init'
-export default function UserRoute({ children }) {
-    const [user, loading, error] = useAuthState(auth)
+export default function RequireAuth({ children }) {
+    const [user, loading] = useAuthState(auth)
     const location = useLocation();
 
     if (loading) {

@@ -7,11 +7,11 @@ import auth from '../../firebase.init'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 export default function Login() {
     const { showPass, setShowPass } = useShowPass()
-    const { emailRef, email, passwordRef, password } = useUserCredential();
-    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const { setEmail, email, password, setPassword } = useUserCredential();
+    const [signInWithEmailAndPassword, user, , error] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate()
     const location = useLocation()
-    const from = location.state?.from?.pathname || '/'
+    const from = location.state?.from?.pathname
     const handleLogin = e => {
         e.preventDefault()
 
@@ -19,7 +19,7 @@ export default function Login() {
     }
 
     if (user) {
-        navigate(from, { replace: true })
+        navigate(from || '/', { replace: true })
 
     }
     return (
@@ -27,21 +27,23 @@ export default function Login() {
             <div className="text-white w-3/4 mx-auto">
                 <header className="mb-3 text-8xl text-center font-[Tangerine] text-orange-500 font-bold">Log In</header>
                 <form onSubmit={e => handleLogin(e)} className='space-y-6'>
-                    <div className="w-full rounded-md px-4 bg-transparent border border-orange-400">
+                    <div className="hover:backdrop-blur-lg duration-500 w-full rounded-md px-4 bg-transparent border border-orange-400">
                         <input
                             type="email"
                             placeholder="Email"
                             className="my-3 w-full border-none bg-transparent outline-none focus:outline-none"
-                            ref={emailRef}
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
                             required
                         />
                     </div>
                     <div
-                        className="flex w-full items-center space-x-2 rounded-md px-4 border border-orange-400 "
+                        className="hover:backdrop-blur-lg duration-500 flex w-full items-center space-x-2 rounded-md px-4 border border-orange-400 "
                     >
                         <input
                             type={showPass ? 'text' : 'password'}
-                            ref={passwordRef}
+                            onChange={e => setPassword(e.target.value)}
+                            value={password}
                             placeholder="Password"
                             className="fos:outline-none my-3 w-full border-none bg-transparent outline-none"
                             required

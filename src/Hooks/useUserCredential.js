@@ -1,17 +1,13 @@
-import { useRef } from "react";
+import { useState } from "react";
 
 
 
 const useUserCredential = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-
-    const nameRef = useRef('')
-    const emailRef = useRef('')
-    const passwordRef = useRef('')
-    const name = nameRef.current.value
-    const email = emailRef.current.value
-    const password = passwordRef.current.value
-    return { nameRef, name, emailRef, email, passwordRef, password }
+    return { setName, name, setEmail, email, setPassword, password }
 }
 
 export default useUserCredential;

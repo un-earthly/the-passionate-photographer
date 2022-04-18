@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Service({ name, pricing, img, desc }) {
 
     return (
-        <div className='p-4 text-center space-y-6'>
+        <div className='p-4 text-center space-y-6 hover:shadow-lg shadow-[#a0fffc] hover:backdrop-blur-md duration-500'>
             <div className=' overflow-hidden h-[250px] rounded-md mx-auto'>
                 <img src={img} className=' duration-500 object-cover h-full w-full rounded-sm filter hover:brightness-50 hover:scale-150' alt="" />
             </div>
