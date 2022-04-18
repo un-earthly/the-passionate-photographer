@@ -1,15 +1,25 @@
 import React from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+import useUserCredential from '../../Hooks/useUserCredential'
 
 export default function Contact() {
+    const { name, setName } = useUserCredential()
+    const handleCheckout = e => {
+        e.preventDefault()
+        name ? toast(`thnaks MR ${name}.Your Form Has been submitted `) : toast(`Please fill up the form`)
+
+
+        setName('')
+    }
     return (
 
         <div className="w-full flex items-center justify-center my-12 text-orange-400">
-            <div className="dark:bg-[#4b60563e] shadow rounded py-12 lg:px-28 px-8 ">
+            <form onSubmit={e => handleCheckout(e)} className="dark:bg-[#4b60563e] shadow rounded py-12 lg:px-28 px-8 ">
                 <h1 className="md:text-7xl text-xl font-bold leading-7 text-center  font-[Tangerine]">Let's chat and get a quote!</h1>
                 <div className="md:flex items-center mt-12">
                     <div className="md:w-72 flex flex-col">
                         <label htmlFor='name' className="text-base font-semibold leading-none  ">Name</label>
-                        <input id='name' arial-label="Please input name" type="name" className="text-base bg-transparent outline-none leading-none  p-3 focus:oultine-none focus:border-orange-700 mt-4  border rounded border-orange-500 " placeholder="Please input  name" />
+                        <input id='name' arial-label="Please input name" value={name} onChange={e => setName(e.target.value)} type="name" className="text-base bg-transparent outline-none leading-none  p-3 focus:oultine-none focus:border-orange-700 mt-4  border rounded border-orange-500 " placeholder="Please input  name" />
                     </div>
                     <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
                         <label htmlFor='email' className="text-base font-semibold leading-none  ">Email Address</label>
@@ -32,7 +42,9 @@ export default function Contact() {
                 <div className="flex items-center justify-center w-full">
                     <button className="mt-9 text-base font-semibold leading-none py-4 px-10 border duration-500 border-orange-700 rounded hover:bg-orange-600 focus:outline-none outline-none">SUBMIT</button>
                 </div>
-            </div>
+            </form>
+
+            <ToastContainer />
         </div>
 
 
